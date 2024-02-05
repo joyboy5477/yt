@@ -75,7 +75,7 @@ if video_url:
         st.text_area("Transcript", value=transcript, height=300, disabled=True)
 
      # Add a copy to clipboard button
-        st.download_button(label="Copy Transcript to Clipboard", 
+        st.download_button(label="Download Transcript", 
                            data=transcript, 
                            file_name="transcript.txt", 
                            mime="text/plain",
