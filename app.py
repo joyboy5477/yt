@@ -73,5 +73,12 @@ if video_url:
         
         transcript = get_transcript(video_id, selected_lang)
         st.text_area("Transcript", value=transcript, height=300, disabled=True)
+
+     # Add a copy to clipboard button
+        st.download_button(label="Copy Transcript to Clipboard", 
+                           data=transcript, 
+                           file_name="transcript.txt", 
+                           mime="text/plain",
+                           key="copy-transcript")
     else:
         st.error("Transcript not available or disabled for this video.")
